@@ -892,9 +892,10 @@
     font-size: 40px;
     padding: 40px;
     margin-top: -100px;
-
+    text-transform: uppercase;
+    
   }
-
+  
   .service-title h1 {
     color: white;
 
@@ -912,15 +913,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 350 px;
-    background: #f0ead8;
+    height: 330px;
+    width: 250px;
+    background: rgb(240, 234, 216);
     position: relative;
-    box-shadow: 5px 5px 20px #054e9775;
+    box-shadow: rgb(5 78 151 / 46%) 5px 5px 20px;
     text-align: center;
     border-radius: 10px;
-    transition: all 0.3s ease-in;
-    margin: 50px;
+    transition: all 0.3s ease-in 0s;
+    margin: 45px;
   }
 
   .scard p {
