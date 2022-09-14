@@ -853,9 +853,10 @@
   @media (max-width: 900px) {
     .skill-title h1 {
       font-size: 40px;
-
     }
-
+    .skill{
+      height: 100%;
+    }
     .skills {
       display: flex;
       flex-direction: column;
