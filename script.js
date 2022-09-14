@@ -10,7 +10,7 @@ const observer = new IntersectionObserver(
         : navbar.classList.remove("sticky");
     },{
     root:null,
-    rootMargin:"-250px",
+    rootMargin:"-200px",
     threshold:"",   
 });
 observer.observe(homesection);
@@ -47,6 +47,13 @@ if(window.onorientationchange){
 
 
 
+let check_box=document.getElementById("menu__toggle")
+let menu_ele=document.querySelectorAll('.menu__item')
+menu_ele.forEach(menu__item => {
+    menu__item.addEventListener('click', ()=>{
+        check_box.checked=false
+    })
+})
 
 // let progessbar = document.querySelectorAll(".progress-value")
 // let progessPr = document.querySelectorAll(".pr").value;
