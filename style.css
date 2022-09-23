@@ -48,7 +48,7 @@
   }
 
   .logo span {
-    color: rgb(74, 172, 246);
+    color: #3a9cf1;
   }
 
   .nav {
@@ -190,6 +190,55 @@
     color: rgba(255, 255, 255, 0.97);
   }
 
+/* The switch - the box around the slider */
+/* .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+} */
   .header {
     position: relative;
     text-align: center;
@@ -266,7 +315,7 @@
 
 
   .btn {
-    background: linear-gradient(-45deg, #1565cd, #740850, #9b13c1, #125ac7);
+    background: linear-gradient(-45deg, #1565cd, #740850, #9b13c1, #3a9cf1);
     background-size: 800% 400%;
     padding: 9px 20px;
     display: inline-block;
@@ -351,7 +400,7 @@
     font-weight: 900;
     outline: none;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #e16817 50%, #d2a211 75%, #5335cf 100%);
+    background: linear-gradient(135deg, #3a9cf1 0%, #de005e 25%, #e16817 50%, #d2a211 75%,#3a9cf1 100%);
     background-size: 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -371,7 +420,7 @@
   }
 
   .auto-type {
-    color: rgba(2, 79, 233, 0.97);
+    color: #3a9cf1;
     font-size: 35px;
     font-weight: 800;
   }
@@ -951,7 +1000,7 @@
     content: '';
     width: 100%;
     height: 0;
-    background: #f13a68;
+    background: #3a9cf1;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1077,7 +1126,7 @@
     outline: none;
     border: none;
     border-radius: 4px;
-    background: #b50edf;
+    background: #661144;
     color: white;
     transition: 0.4s ease;
     margin-right: 6px;
@@ -1120,7 +1169,7 @@
   }
 
   .card-button:hover {
-    background: rgba(227, 42, 25, 0.721);
+    background: #3a9cf1;
     color: #ffffff;
     font-weight: 500;
     border: 1px solid white;
@@ -1218,6 +1267,7 @@
     letter-spacing: 1px;
     margin: 4px;
     border-radius: 5px;
+    padding-left: 8px;
   }
 
   .send-button {
@@ -1227,7 +1277,7 @@
     overflow: hidden;
     transition: all .2s ease-in-out;
     border-radius: 5px;
-    background-color: rgb(54, 147, 198);
+    background-color: #3a9cf1;
     border: none;
   }
 
