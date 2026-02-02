@@ -5,12 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aman Singh | Portfolio</title>
+  <meta name="description" content="Aman Singh - Python developer specializing in fintech data systems, ETL pipelines, and analytics APIs.">
   <link rel="stylesheet" href="style.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="Home">
     <nav class="site-nav">
       <a class="brand" href="#Home">Aman Singh</a>
@@ -18,7 +20,7 @@
       <label class="nav-toggle" for="nav-toggle">
         <span></span>
       </label>
-      <div class="nav-links">
+      <div class="nav-links" role="navigation" aria-label="Primary">
         <a href="#About">About</a>
         <a href="#Experience">Experience</a>
         <a href="#Skill">Skills</a>
@@ -86,7 +88,7 @@
     </section>
   </header>
 
-  <main>
+  <main id="main">
     <section class="about" id="About">
       <div class="section-head">
         <p class="eyebrow">About</p>
@@ -273,10 +275,10 @@
         <h2>Let us build something reliable.</h2>
       </div>
       <div class="contact-grid">
-        <form id="contact-form" class="contact-form" role="form">
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+        <form id="contact-form" class="contact-form" role="form" autocomplete="on">
+          <input type="text" name="name" placeholder="Name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+          <textarea name="message" rows="6" placeholder="Tell me about your project" autocomplete="off" required></textarea>
           <button class="btn" type="submit">Send Message</button>
         </form>
         <div class="contact-card">

@@ -1,4 +1,4 @@
-﻿const typed = new Typed(".auto-type", {
+const typed = new Typed(".auto-type", {
   strings: ["Python Developer", "Data Analytics", "AI + RAG Systems"],
   typeSpeed: 40,
   backSpeed: 30,
