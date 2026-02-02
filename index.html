@@ -1,412 +1,304 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aman Singh | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Montreal:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <section id="Home">
-        <!-- content in header -->
-        <div class="header a ">
-            <div class="hamburger-menu block">
-               <a class="logo-menu logo" href="#"><span>Aman's</span> Portfol<span>i</span>o</a>
-               <!-- <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label> -->
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                  <span></span>
-                </label>
-            
-                <ul class="menu__box">
-                    <li><a class="menu__item" href="#">Home</a></li>
-                    <li><a class="menu__item" href="#About">About</a></li>
-                    <li><a class="menu__item" href="#Experience">Experience</a></li>
-                    <li><a class="menu__item" href="#Skill">Skills</a></li>
-                    <li><a class="menu__item" href="#Service">Services</a></li>
-                    <li><a class="menu__item" href="#Project">Projects</a></li>
-                    <li><a class="menu__item"href="#Contact"><button class="btn">Contact</button></a></li>
-                </ul>
-              </div>
-            <nav class="navbar sticky block">
-                <div class="logo"><a href="#"><span>Aman's</span> Portfol<span>i</span>o</a></div>
-                <!-- <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label> -->
-                <div class="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Experience">Experience</a></li>
-                    <li><a href="#Skill">Skills</a></li>
-                    <li><a href="#Service">Services</a></li>
-                    <li><a href="#Project">Projects</a></li>
-                </div>
-                <div class="con"><a href="#Contact"><button class="btn">Contact</button></a>
+  <header class="site-header" id="Home">
+    <nav class="site-nav">
+      <a class="brand" href="#Home">Aman Singh</a>
+      <input id="nav-toggle" type="checkbox" />
+      <label class="nav-toggle" for="nav-toggle">
+        <span></span>
+      </label>
+      <div class="nav-links">
+        <a href="#About">About</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Skill">Skills</a>
+        <a href="#Project">Projects</a>
+        <a href="#Resume">Resume</a>
+        <a href="#Contact" class="btn btn-small">Contact</a>
+      </div>
+    </nav>
 
-                </div>
-            </nav>  
-
-            <!-- Intro content -->
-
-            <div class="intro">
-                <div class="intro-content">
-                    <div class="intro-logo">
-                        <img src="abc.png" alt="">
-                    </div>
-                    <div class="text1">
-                        <h1>Hello, It's me <br>  <span >  Aman Singh</span> <br><span class="auto-type"></h1></span>
-                        <h3>Python Developer with 2 years of fintech experience.</h3>
-                        <div class="center">
-                            <div id="social">
-                                <ul>
-                                    <li class="linkedin">
-                                        <a href="https://www.linkedin.com/in/aman-singh-865780203/" target="#">
-                                            <button class="border" type="button"><i class="fa fa-linkedin fa-2x"></i>
-                                            </button>
-                                        </a>
-                                    </li>
-
-                                    <li class="github">
-                                        <a href="https://github.com/Aman-singh143" target="#">
-                                            <button class="border" type="button"><i class="fa fa-github fa-2x "></i>
-                                            </button>
-                                        </a>
-                                    </li>
-
-                                    <li class="twitter">
-                                        <a href="https://twitter.com/Aman_Singh143" target="#">
-                                            <button class="border" type="button"><i
-                                                    class="fa fa-twitter fa-2x"></i></button>
-                                        </a>
-                                    </li>
-
-                                    <li class="instagram">
-                                        <a href="http://instagram.com/amansinghofficial_?utm_source=qr" target="#">
-                                            <button class="border" type="button"><i
-                                                    class="fa fa-instagram fa-2x"></i></button>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!--Content before waves-->
-            <div class="inner-header flex">
-                <!--Just the logo.. Don't mind this-->
-
-            </div>
-
-            <!--Waves Container-->
-            <div>
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave"
-                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="parallax">
-                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-                    </g>
-                </svg>
-            </div>
-            
-            <!--Waves end-->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Python Developer - Fintech - Data Analytics</p>
+        <h1>Building reliable data systems with <span class="accent">Aman Singh</span>.</h1>
+        <h2 class="auto-type"></h2>
+        <p class="lead">
+          Python developer with 2 years of fintech experience building ETL pipelines, analytics APIs, and real-time
+          dashboards. I optimize SQL performance, automate reporting, and ship tools that turn complex data into
+          actionable decisions.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="https://drive.google.com/file/d/1JxQFYgWvXPRVOUMZ0E14WqU9_U67BEli/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download Resume</a>
+          <a class="btn ghost" href="#Project">View Projects</a>
         </div>
+        <div class="chip-row">
+          <span class="chip">FastAPI</span>
+          <span class="chip">Flask</span>
+          <span class="chip">ETL</span>
+          <span class="chip">SQL Optimization</span>
+          <span class="chip">RAG + LLMs</span>
+        </div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/aman-singh-865780203/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Aman-singh143" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://twitter.com/Aman_Singh143" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://instagram.com/amansinghofficial_?utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-card">
+          <img src="profile.jpeg" alt="Aman Singh">
+          <div class="portrait-meta">
+            <p class="name">Aman Singh</p>
+            <p class="role">Python Developer - Data Analytics</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-card">
+            <p class="stat">2+ years</p>
+            <p class="stat-label">Fintech experience</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat">60%</p>
+            <p class="stat-label">ETL time reduced</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- ---------About Section---------- -->
+  </header>
 
+  <main>
     <section class="about" id="About">
-        <div class="about-title">
-            <h1>About me</h1>
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>Interactive resume at a glance.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Profile</h3>
+          <p>
+            I build internal analytics platforms, REST APIs, and data pipelines for fintech teams. My focus is on
+            dependable ingestion, clean data models, and dashboards that stay fast at scale.
+          </p>
         </div>
-        <div class="about-content">
-            <div class="s1">
-                <h3><span>Name:</span> Aman Singh</h3>
-                <h3><span>MobileNo:</span><a href="tel:+919106311773"> +919106311773</a></h3>
-                <h3><span>Email Id:</span><a href="mailto:amansingh143003@gmail.com"> amansingh143003@gmail.com</a></h3>
-                <h3><span>Address :</span> Surat Gujaart, INDIA</h3>
-            </div>
-            <div class="des">
-                <P>Python Developer with 2 years of fintech experience. SCET B.E. 2020–2024, CGPA 8.00.</P>
-            </div>
+        <div class="about-card">
+          <h3>Highlights</h3>
+          <ul>
+            <li>ETL pipelines in Python for multi-format partner data</li>
+            <li>Flask and FastAPI services powering analytics dashboards</li>
+            <li>Query and procedure optimization improving performance by 50%</li>
+            <li>Automation with scheduling, monitoring, and email reporting</li>
+            <li>RAG and NL-to-SQL workflows for analyst productivity</li>
+          </ul>
         </div>
-        <div class="res">
-            <a class="btn" href="https://drive.google.com/uc?export=download&id=1JxQFYgWvXPRVOUMZ0E14WqU9_U67BEli" target="_blank" rel="noopener noreferrer">Resume</a>
+        <div class="about-card">
+          <h3>Details</h3>
+          <ul>
+            <li><span>Name:</span> Aman Singh</li>
+            <li><span>Mobile:</span> <a href="tel:+919106311773">+91 9106311773</a></li>
+            <li><span>Email:</span> <a href="mailto:amansingh143003@gmail.com">amansingh143003@gmail.com</a></li>
+            <li><span>Location:</span> Surat, Gujarat, India</li>
+            <li><span>Education:</span> SCET B.E. Computer Engineering, 2020-2024 (CGPA 8.00)</li>
+          </ul>
         </div>
-
+      </div>
     </section>
+
     <section class="experience" id="Experience">
-        <div class="experience-title">
-            <h1>Experience</h1>
+      <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Hands-on delivery in fintech analytics.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>Python Developer - Data Analytics</h3>
+            <span>Jun 2024 - Present</span>
+          </div>
+          <p class="timeline-org">NJ Asset Management Pvt. Ltd. - Surat</p>
+          <ul>
+            <li>Designed and deployed Python ETL pipelines for partner data in MySQL, reducing manual prep by 60%.</li>
+            <li>Built RESTful Flask services and analytics dashboards with AgGrid, Plotly, and Apex.js.</li>
+            <li>Optimized SQL queries and stored procedures to improve dashboard responsiveness by 50%.</li>
+            <li>Automated workflow scheduling with email summaries and reconciliation reports.</li>
+            <li>Implemented RAG-based NL-to-SQL workflows to improve analyst productivity.</li>
+          </ul>
         </div>
-        <div class="experience-content">
-            <div class="experience-item">
-                <h3>Python Developer <span>(Jun 2024–Present)</span></h3>
-                <h4>NJ Asset Management</h4>
-                <ul>
-                    <li>Built Python data pipelines to automate portfolio analytics and reporting workflows.</li>
-                    <li>Developed reusable utilities for data validation, feature engineering, and model evaluation.</li>
-                    <li>Partnered with analysts to translate business questions into dashboards and insights.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Data Science Intern <span>(Jan 2024–Jun 2024)</span></h3>
-                <h4>NJ Asset Management</h4>
-                <ul>
-                    <li>Prepared structured datasets, handling missing values, outliers, and feature scaling.</li>
-                    <li>Prototyped forecasting and classification models to support investment research.</li>
-                    <li>Documented experiments and communicated findings to cross-functional stakeholders.</li>
-                </ul>
-            </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>Data Science Intern</h3>
+            <span>Jan 2024 - Jun 2024</span>
+          </div>
+          <p class="timeline-org">NJ Asset Management Pvt. Ltd. - Surat</p>
+          <ul>
+            <li>Built modular analytics tools with Flask, MySQL, and Plotly to replace Excel reporting.</li>
+            <li>Designed real-time dashboards with summary cards and interactive charts for sales datasets.</li>
+            <li>Delivered end-to-end backend logic and frontend integration for operations teams.</li>
+          </ul>
         </div>
-    </section>
-    <section class="skill" id="Skill">
-        <div class="skill-title">
-            <h1>Skills</h1>
-        </div>
-
-        <div class="skills">
-
-            <div class="row1">
-                <div class="col">
-                    <div>
-                        <h3>Languages</h3>
-                        <p class="skill-list">Python, SQL, JavaScript</p>
-                    </div>
-                    <div class="pr">85%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value languages"></div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Backend/APIs</h3>
-                        <p class="skill-list">Flask, FastAPI, REST, Pydantic</p>
-                    </div>
-                    <div class="pr">75%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value backend"></div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Databases</h3>
-                        <p class="skill-list">MySQL, Oracle SQL, BigQuery (optimization/indexing/procedures)</p>
-                    </div>
-                    <div class="pr">80%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value databases"></div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Data/Engineering</h3>
-                        <p class="skill-list">Pandas, NumPy, ETL, Scheduling, Data Validation</p>
-                    </div>
-                    <div class="pr">78%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value data-eng"></div>
-                </div>
-            </div>
-            <div class="row2">
-                <div class="col">
-                    <div>
-                        <h3>ML/LLMs</h3>
-                        <p class="skill-list">scikit-learn, XGBoost, TensorFlow, Hugging Face, LangChain,
-                            LlamaIndex, RAG, FAISS/Chroma, Prompt Engineering</p>
-                    </div>
-                    <div class="pr">70%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value ml-llm"></div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Tools</h3>
-                        <p class="skill-list">Docker, GitHub Actions, Kubernetes (Basics), GCP</p>
-                    </div>
-                    <div class="pr">65%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value tools"></div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Viz/Monitoring</h3>
-                        <p class="skill-list">Plotly, Matplotlib, AgGrid, pytest, Logging, Alerting</p>
-                    </div>
-                    <div class="pr">68%</div>
-                </div>
-                <div class="progress">
-                    <div class="progress-value viz-monitoring"></div>
-                </div>
-            </div>
+      </div>
     </section>
 
-    <section id="Service">
-
-        <div class="service-title">
-            <h1>Services</h1>
+    <section class="skills" id="Skill">
+      <div class="section-head">
+        <p class="eyebrow">Skills</p>
+        <h2>A focused toolkit for data systems.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <p>Python, SQL, JavaScript, PL/SQL</p>
         </div>
-
-        <div class="services">
-            <div class="scard">
-                <p>
-                    <i class="fa fa-paint-brush fa-2x  "></i><br>
-                    Ui/Ux Design
-                </p>
-            </div>
-  
-
-            <div class="scard">
-                <p>
-                    <i class="fa fa-laptop fa-2x"></i><br>
-                    Web Development
-                </p>
-            </div>
-     
-    
-            <div class="scard">
-                <p>
-                    <i class="fa fa-mobile fa-2x"></i><br>
-                    App Development
-
-                </p>
-            </div>
+        <div class="skill-card">
+          <h3>Backend and APIs</h3>
+          <p>Flask, FastAPI, REST, Pydantic</p>
         </div>
-
-
-
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <p>MySQL, PostgreSQL, Oracle, MongoDB, BigQuery</p>
+        </div>
+        <div class="skill-card">
+          <h3>Data Engineering</h3>
+          <p>ETL pipelines, Pandas, NumPy, Apache Spark, workflow automation</p>
+        </div>
+        <div class="skill-card">
+          <h3>ML and LLMs</h3>
+          <p>scikit-learn, XGBoost, TensorFlow, Hugging Face, LangChain, LlamaIndex, RAG</p>
+        </div>
+        <div class="skill-card">
+          <h3>Cloud and Tools</h3>
+          <p>AWS, GCP, Docker, Kubernetes (basics), GitHub Actions, CI/CD</p>
+        </div>
+        <div class="skill-card">
+          <h3>Visualization</h3>
+          <p>Power BI, Tableau, Plotly, Matplotlib, AgGrid</p>
+        </div>
+        <div class="skill-card">
+          <h3>Testing and Monitoring</h3>
+          <p>pytest, logging, alerting</p>
+        </div>
+      </div>
     </section>
 
-    <section id="Project">
-        <div class="project-title">
-            <h1>Projects</h1>
-        </div>
-        <div class="project-content">
-            <div class="card">
-                <div class="card-img"><img src="p1.png" alt=""></div>
-                <div class="card-info">
-                    <p class="text-title">Online Payment Fraud Detection</p>
-                    <p class="text-body">FastAPI, XGBoost, React — 6.3M+ transactions, ROC-AUC 0.96.</p>
-                    <a href="#" target="#"><button class="card-button">Code</button></a>
-                </div>
+    <section class="projects" id="Project">
+      <div class="section-head">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected builds with measurable impact.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="p1.png" alt="Online Payment Fraud Detection">
+          <div class="project-body">
+            <h3>Online Payment Fraud Detection</h3>
+            <p>FastAPI, XGBoost, React, Docker - 6.3M+ transactions, ROC-AUC 0.96.</p>
+            <div class="project-actions">
+              <a class="btn btn-small" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
-            <div class="card">
-                <div class="card-img"><img src="p2.png" alt=""></div>
-                <div class="card-info">
-                    <p class="text-title">ESG Performance Analysis</p>
-                    <p class="text-body">Pandas, Regression, Monte Carlo — R²=0.62 insights on ESG returns.</p>
-                    <a href="#" target="#"><button class="card-button">Code</button></a>
-                </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="p2.png" alt="ESG Performance Analysis">
+          <div class="project-body">
+            <h3>ESG Performance Analysis</h3>
+            <p>Pandas, StatsModels, Monte Carlo - R2=0.62 insights on ESG returns.</p>
+            <div class="project-actions">
+              <a class="btn btn-small" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
-        </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="p3.png" alt="RAG Analytics Assistant">
+          <div class="project-body">
+            <h3>RAG Analytics Assistant</h3>
+            <p>LangChain, FAISS/Chroma, NL-to-SQL flows to speed up insight delivery for analysts.</p>
+            <div class="project-actions">
+              <a class="btn btn-small" href="#" target="_blank" rel="noopener noreferrer">Case Study</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-
-    <section id="Contact">
-
-        <h1 class="section-header">Contact</h1>
-
-        <div class="contact-wrapper">
-
-            <!-- Left contact page -->
-
-            <form id="contact-form" class="form-horizontal" role="form">
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value=""
-                            required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value=""
-                            required>
-                    </div>
-                </div>
-
-                <textarea class="form-control msg" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-
-                <button class="send-button" id="submit" type="submit" value="SEND">
-                    <div class="alt-send-button">
-                        <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-                    </div>
-
-                </button>
-
-            </form>
-
-            <!-- Left contact page -->
-
-            <div class="direct-contact-container">
-
-                <ul class="contact-list">
-                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">
-                        <a href="...">Surat, India</a></span></i>
-                    </li>
-
-                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone">
-                        <a href="tel:+919106311773" title="Give me a call">+919106311773</a></span></i>
-                     </li>
-
-                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail">
-                        <a href="mailto:amansingh143003@gmail.com" title="Send me an email">amansingh143003@gmail.com</a></span></i>
-                     </li>
-
-                </ul>
-
-                <hr>
-                <ul class="social-media-list">
-                    <li><a href="https://github.com/Aman-singh143" target="#k" class="contact-icon">
-                            <i class="fa fa-github" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="https://www.linkedin.com/in/aman-singh-865780203/" target="#"
-                            class="contact-icon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="https://twitter.com/Aman_Singh143" target="#" class="contact-icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li><a href="http://instagram.com/amansinghofficial_?utm_source=qr" target="#"
-                            class="contact-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-                <hr>
-
-                <div class="copyright">&copy;Aman Singh<br> ALL OF THE RIGHTS RESERVED</div>
-
-            </div>
-
+    <section class="resume" id="Resume">
+      <div class="section-head">
+        <p class="eyebrow">Resume</p>
+        <h2>Download the full resume.</h2>
+      </div>
+      <div class="resume-card">
+        <div>
+          <h3>Python Developer - Data Analytics</h3>
+          <p>
+            ETL pipelines, REST APIs, SQL optimization, dashboards, and agentic AI workflows for fintech analytics.
+          </p>
         </div>
-
+        <a class="btn" href="https://drive.google.com/file/d/1JxQFYgWvXPRVOUMZ0E14WqU9_U67BEli/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download Resume</a>
+      </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
+
+    <section class="certifications" id="Certifications">
+      <div class="section-head">
+        <p class="eyebrow">Certifications</p>
+        <h2>Credentials and continuous learning.</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>Oracle Cloud Infrastructure 2025</h3>
+          <p>Certified Data Science Professional</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="Contact">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let us build something reliable.</h2>
+      </div>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" role="form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <div class="contact-card">
+          <p class="contact-title">Reach me directly</p>
+          <ul>
+            <li><i class="fa fa-map-marker"></i> Surat, India</li>
+            <li><i class="fa fa-phone"></i> <a href="tel:+919106311773">+91 9106311773</a></li>
+            <li><i class="fa fa-envelope"></i> <a href="mailto:amansingh143003@gmail.com">amansingh143003@gmail.com</a></li>
+          </ul>
+          <div class="social-row">
+            <a href="https://github.com/Aman-singh143" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/aman-singh-865780203/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/Aman_Singh143" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/amansinghofficial_?utm_source=qr" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+          </div>
+          <p class="copyright">(c) Aman Singh. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
