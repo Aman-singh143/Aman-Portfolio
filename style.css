@@ -417,6 +417,8 @@ input:checked + .slider:before {
     font-size: 22px;
     font-weight: 400;
     color: rgba(232, 230, 230, 0.803);
+    line-height: 1.4;
+    max-width: 36rem;
   }
 
   .auto-type {
@@ -446,6 +448,10 @@ input:checked + .slider:before {
       text-align: center;
       margin: 20px;
       font-size: 15px;
+    }
+
+    .text1 h3 {
+      max-width: 100%;
     }
 
   }
