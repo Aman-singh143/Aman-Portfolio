@@ -1,22 +1,20 @@
 # Personal Portfolio 🔥
 >https://aman-singh143.github.io/Aman-Portfolio/
 
-:star: Star me on GitHub — it helps!
+**Aman Singh | Surat, Gujarat, India**  
+📞 +91 91063 11773 | ✉️ amansingh143003@gmail.com  
+LinkedIn: https://www.linkedin.com/in/aman-singh-865780203/ | GitHub: https://github.com/Aman-singh143
 
-
+Python developer with fintech experience focused on building ETL pipelines, API integrations, and performance-tuned SQL workflows. I work on data-intensive systems and have hands-on experience with LLM/RAG-enabled solutions for smarter retrieval and automation.
 
 ### Website Preview
 ![image](https://user-images.githubusercontent.com/109282041/192486351-568718eb-26d8-4b2a-924e-50ca5c7f0184.png)
 
-  
-
-
-:star: Star me on GitHub — it helps!
-
 ## Features 📋
-⚡️ Fully Responsive\
-⚡️ Valid HTML5 & CSS3\
-⚡️ Typing animation using `Typed.js`\
+⚡️ Experience section\
+⚡️ Projects showcase\
+⚡️ Skills overview\
+⚡️ Contact information\
 
 ## Next update  
 ⚡️ Improve modifiability\
