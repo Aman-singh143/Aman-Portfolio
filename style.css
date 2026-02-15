@@ -1144,9 +1144,14 @@ img {
 }
 
 .social-icons svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+  width: 18px;
+  /* Slightly larger for better visibility */
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ===== Scroll Reveal Animation ===== */

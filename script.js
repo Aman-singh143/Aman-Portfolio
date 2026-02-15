@@ -82,21 +82,31 @@
 
     var navObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        var match = sections.find(function (s) { return s.el === entry.target; });
-        if (match) {
-          if (entry.isIntersecting) {
+        if (entry.isIntersecting) {
+          var match = sections.find(function (s) { return s.el === entry.target; });
+          if (match) {
             miniNavLinks.forEach(function (l) { l.classList.remove('active-nav'); });
             match.link.classList.add('active-nav');
           }
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '-80px 0px -50% 0px'
+      threshold: 0.1, // Lower threshold
+      rootMargin: '-10% 0px -40% 0px' // Adjusted margin
     });
 
     sections.forEach(function (s) {
       navObserver.observe(s.el);
+    });
+
+    // Handle bottom of page case explicitly
+    window.addEventListener('scroll', function () {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+        miniNavLinks.forEach(function (l) { l.classList.remove('active-nav'); });
+        if (miniNavLinks.length > 0) {
+          miniNavLinks[miniNavLinks.length - 1].classList.add('active-nav');
+        }
+      }
     });
   }
 
