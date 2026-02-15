@@ -290,13 +290,15 @@ img {
   font-weight: 600;
   color: var(--muted);
   transition: all var(--transition);
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--accent-2);
   background: var(--accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .nav-links a.active {
@@ -713,6 +715,18 @@ img {
   color: var(--accent);
 }
 
+.contact-card svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.35rem;
+  /* Slight spacing */
+  vertical-align: text-bottom;
+  /* Align icon with text */
+  position: relative;
+  top: -1px;
+  /* Optical adjustment */
+}
+
 /* ===== Right Column ===== */
 .right-col {
   background: linear-gradient(165deg, var(--surface) 0%, var(--surface-2) 100%);
@@ -742,13 +756,15 @@ img {
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
   transition: all var(--transition);
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .mini-nav a:hover,
 .mini-nav a:focus-visible {
   color: var(--accent-2);
   background: var(--accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .mini-nav a.active-nav {
