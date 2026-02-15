@@ -1,0 +1,199 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Production work and selected technical projects by Aman Singh, focused on Python backend systems in financial data environments.">
+  <meta name="author" content="Aman Singh">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Projects | Aman Singh">
+  <meta property="og:description" content="Production-style backend and data projects with measurable outcomes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aman-singh143.github.io/Aman-Portfolio/projects.html">
+  <meta property="og:image" content="https://aman-singh143.github.io/Aman-Portfolio/profile.jpeg">
+  <title>Projects | Aman Singh</title>
+  <meta name="theme-color" content="#0d9488">
+  <link rel="canonical" href="https://aman-singh143.github.io/Aman-Portfolio/projects.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"
+    title="Toggle theme">🌙</button>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Aman Singh</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a class="active" href="projects.html" aria-current="page">Projects</a>
+        <a href="resume.pdf" download>Resume</a>
+        <a href="mailto:amansingh143003@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="section">
+    <div class="container cv-shell">
+      <div class="cv-grid">
+        <div class="cv-main">
+          <section class="card reveal">
+            <h1>Work Highlights</h1>
+            <p>This portfolio focuses on full-time in-house backend work. The first set below reflects production work
+              delivered in my role.</p>
+          </section>
+
+          <article class="card reveal">
+            <h2>Production Work 1 — ETL and Reconciliation Pipeline Suite</h2>
+            <p><strong>Context:</strong> Built and maintained Python ETL workflows for financial datasets used by
+              operations and reporting teams.</p>
+            <p><strong>Ownership:</strong> Designed, implemented, and maintained pipeline stages, validation logic, and
+              recurring execution reliability.</p>
+            <h3>Implementation</h3>
+            <ul>
+              <li>Designed ingestion, transformation, validation, and reconciliation pipeline stages.</li>
+              <li>Added idempotent checks and retry-safe logic for stable recurring execution.</li>
+              <li>Integrated workflow scheduling and automated email summaries for business users.</li>
+            </ul>
+            <h3>Constraints and Decisions</h3>
+            <ul>
+              <li>Constraint: inconsistent upstream partner data formats.</li>
+              <li>Decision: strict validation + reconciliation checkpoints before loading.</li>
+              <li>Tradeoff: slightly longer pipeline run-time for better data integrity.</li>
+            </ul>
+            <div class="tech-badges">
+              <span>Python</span><span>Pandas</span><span>MySQL</span><span>SQL</span><span>Linux</span>
+            </div>
+            <p><strong>Impact:</strong> Reduced manual data preparation effort by ~60%.</p>
+            <details>
+              <summary><strong>Sanitized Artifact Preview — ETL Flow</strong></summary>
+              <pre>Ingest -> Schema Check -> Transform -> Reconcile -> Load -> Report/Notify</pre>
+            </details>
+          </article>
+
+          <article class="card reveal">
+            <h2>Production Work 2 — Internal API and Reporting Backend</h2>
+            <p><strong>Context:</strong> Developed backend services and data feeds for internal dashboards and recurring
+              reporting workflows.</p>
+            <p><strong>Ownership:</strong> Built API endpoints, optimized query layer, and handled reliability
+              improvements for production reporting.</p>
+            <h3>Implementation</h3>
+            <ul>
+              <li>Built FastAPI/Flask endpoints and backend scripts for internal automation use cases.</li>
+              <li>Optimized SQL queries, indexes, and stored procedures for dashboard/report responsiveness.</li>
+              <li>Implemented structured logging and issue tracking for pipeline reliability.</li>
+            </ul>
+            <h3>Constraints and Decisions</h3>
+            <ul>
+              <li>Constraint: reporting latency during peak business usage.</li>
+              <li>Decision: tune query plans and indexes before adding new API complexity.</li>
+              <li>Tradeoff: prioritized consistency and response time over rapid feature expansion.</li>
+            </ul>
+            <div class="tech-badges">
+              <span>Python</span><span>FastAPI</span><span>Flask</span><span>MySQL</span><span>SQL</span><span>Git</span>
+            </div>
+            <p><strong>Impact:</strong> Improved dashboard performance by ~50% and accelerated reporting cycles.</p>
+            <details>
+              <summary><strong>Sanitized Artifact Preview — API Contract</strong></summary>
+              <pre>GET /api/reports/summary?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD
+Response: totals, segment_breakdown, reconciliation_status</pre>
+            </details>
+          </article>
+
+          <article class="card reveal">
+            <h2>Side Project — Payment Fraud Detection System</h2>
+            <p><strong>Purpose:</strong> Independent technical project to practice large-scale financial data modeling.
+            </p>
+            <ul>
+              <li>Preprocessed and engineered features on 6.3M+ transaction records.</li>
+              <li>Trained and evaluated classification models (including XGBoost).</li>
+              <li>Achieved ROC-AUC around 0.96.</li>
+            </ul>
+            <p><strong>Tech:</strong> Python, Pandas, Scikit-learn, XGBoost</p>
+          </article>
+        </div>
+
+        <aside class="cv-side" aria-label="Project highlights">
+          <section class="card reveal">
+            <h3>Production Skills Demonstrated</h3>
+            <div class="skill-chip-wrap">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">FastAPI</span>
+              <span class="skill-chip">Flask</span>
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">SQL Optimization</span>
+              <span class="skill-chip">ETL Design</span>
+              <span class="skill-chip">Data Reconciliation</span>
+              <span class="skill-chip">Workflow Scheduling</span>
+              <span class="skill-chip">Logging and Monitoring</span>
+              <span class="skill-chip">Financial Data Analysis</span>
+              <span class="skill-chip">Reporting Outputs</span>
+            </div>
+          </section>
+
+          <section class="card reveal">
+            <h3>Project Scope Note</h3>
+            <ul class="side-list">
+              <li>Primary highlights are from full-time in-house work experience.</li>
+              <li>Additional project is included only as supplemental technical depth.</li>
+              <li>No freelance or client-delivery work is being represented here.</li>
+            </ul>
+          </section>
+
+          <section class="card reveal">
+            <h3>Best Role Alignment</h3>
+            <p>Python backend teams needing production ETL ownership, API development, SQL performance work, and
+              reliable reporting pipelines.</p>
+          </section>
+
+          <section class="card reveal">
+            <h3>Engineering Practice Depth</h3>
+            <ul class="side-list">
+              <li>API documentation using OpenAPI/Swagger conventions</li>
+              <li>Growing test coverage using pytest for backend modules</li>
+              <li>Production troubleshooting through structured logs and checks</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer reveal">
+    <div class="container footer-wrap">
+      <div class="social-icons">
+        <a href="mailto:amansingh143003@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg></a>
+        <a href="https://linkedin.com/in/aman-singh-865780203" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+            <path
+              d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+          </svg></a>
+        <a href="https://github.com/Aman-singh143" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+          </svg></a>
+      </div>
+      <p>© 2026 Aman Singh — Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
