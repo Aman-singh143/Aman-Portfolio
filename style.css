@@ -701,6 +701,18 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.contact-card a {
+  text-decoration: none;
+  transition: color var(--transition), text-decoration var(--transition);
+}
+
+.contact-card a:hover,
+.contact-card a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--accent);
+}
+
 /* ===== Right Column ===== */
 .right-col {
   background: linear-gradient(165deg, var(--surface) 0%, var(--surface-2) 100%);
