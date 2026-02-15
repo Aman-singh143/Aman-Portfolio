@@ -1,7 +1,7 @@
 ﻿(function () {
   'use strict';
 
-  // ===== Mobile Nav Toggle =====
+  // Mobile Nav Toggle
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
 
@@ -12,7 +12,7 @@
     });
   }
 
-  // ===== Theme Toggle =====
+  // Theme Toggle
   var themeBtn = document.getElementById('theme-toggle');
   var html = document.documentElement;
   var STORAGE_KEY = 'aman-portfolio-theme';
@@ -43,7 +43,7 @@
     });
   }
 
-  // ===== Scroll Reveal (IntersectionObserver) =====
+  // Scroll Reveal (IntersectionObserver)
   var reveals = document.querySelectorAll('.reveal');
   if (reveals.length > 0 && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
@@ -68,7 +68,7 @@
     });
   }
 
-  // ===== Active Mini-Nav Highlighting =====
+  // Active Mini-Nav Highlighting
   var miniNavLinks = document.querySelectorAll('.mini-nav a');
   if (miniNavLinks.length > 0 && 'IntersectionObserver' in window) {
     var sections = [];

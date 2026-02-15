@@ -1,7 +1,7 @@
-﻿/* ===== Google Fonts ===== */
+﻿/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 
-/* ===== Design Tokens ===== */
+/* Design Tokens */
 :root {
   color-scheme: light dark;
   --bg: #f0f5f4;
@@ -24,7 +24,7 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ===== Dark Theme ===== */
+/* Dark Theme */
 [data-theme="dark"] {
   --bg: #0a0f14;
   --surface: #111a1f;
@@ -62,7 +62,7 @@
   }
 }
 
-/* ===== Reset & Base ===== */
+/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -73,7 +73,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== Custom Scrollbar ===== */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
