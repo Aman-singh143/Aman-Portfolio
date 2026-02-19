@@ -649,6 +649,10 @@ img {
   justify-content: center;
 }
 
+.action-row-start {
+  justify-content: flex-start;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -682,6 +686,12 @@ img {
 .btn-light:focus-visible {
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+.btn-badge {
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.85rem;
 }
 
 /* ===== Contact Card ===== */
