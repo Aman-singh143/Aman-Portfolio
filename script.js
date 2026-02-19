@@ -128,6 +128,12 @@
     var pauseStart = 500;
 
     function typeEffect() {
+      // Respect reduced motion: show first role static, no typing
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typingEl.textContent = roles[0];
+        return;
+      }
+
       var currentRole = roles[roleIndex];
 
       if (!isDeleting) {
