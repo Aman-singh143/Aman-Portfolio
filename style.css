@@ -1,5 +1,4 @@
 ﻿/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 
 /* Design Tokens */
 :root {
@@ -650,6 +649,10 @@ img {
   justify-content: center;
 }
 
+.action-row-start {
+  justify-content: flex-start;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -683,6 +686,12 @@ img {
 .btn-light:focus-visible {
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+.btn-badge {
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.85rem;
 }
 
 /* ===== Contact Card ===== */
@@ -1382,5 +1391,36 @@ details pre {
     background: #fff;
     color: #000;
     font-size: 12px;
+  }
+}
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .profile-card::before {
+    animation: none;
+  }
+
+  .typing-cursor {
+    display: none;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
