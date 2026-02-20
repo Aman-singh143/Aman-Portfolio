@@ -1,0 +1,9 @@
+{
+  "name": "aman-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website with theme switching",
+  "main": "script.js",
+  "scripts": {
+    "test": "bun test"
+  }
+}
