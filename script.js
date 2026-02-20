@@ -1,5 +1,28 @@
-﻿(function () {
+/**
+ * Applies the given theme to the document and updates the theme toggle button.
+ * @param {string} theme - 'light' or 'dark'
+ * @param {HTMLElement} htmlElement - The root html element
+ * @param {HTMLElement|null} themeBtn - The theme toggle button element
+ */
+function applyTheme(theme, htmlElement, themeBtn) {
+  if (!htmlElement) return;
+  htmlElement.setAttribute('data-theme', theme);
+  if (themeBtn) {
+    themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    themeBtn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+}
+
+// Expose for testing if in Node/Bun environment
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { applyTheme };
+}
+
+(function () {
   'use strict';
+
+  // Only run in browser environment
+  if (typeof document === 'undefined') return;
 
   // Mobile Nav Toggle
   const toggle = document.querySelector('.nav-toggle');
@@ -17,28 +40,20 @@
   const html = document.documentElement;
   const STORAGE_KEY = 'aman-portfolio-theme';
 
-  function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    if (themeBtn) {
-      themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
-      themeBtn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-  }
-
   // Load saved theme or detect system preference
   const savedTheme = localStorage.getItem(STORAGE_KEY);
   if (savedTheme) {
-    applyTheme(savedTheme);
+    applyTheme(savedTheme, html, themeBtn);
   } else {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(prefersDark ? 'dark' : 'light');
+    applyTheme(prefersDark ? 'dark' : 'light', html, themeBtn);
   }
 
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       const current = html.getAttribute('data-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
+      applyTheme(next, html, themeBtn);
       localStorage.setItem(STORAGE_KEY, next);
     });
   }
@@ -128,6 +143,12 @@
     const pauseStart = 500;
 
     function typeEffect() {
+      // Respect reduced motion: show first role static, no typing
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typingEl.textContent = roles[0];
+        return;
+      }
+
       const currentRole = roles[roleIndex];
 
       if (!isDeleting) {
