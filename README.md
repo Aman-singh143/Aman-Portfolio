@@ -1,47 +1,59 @@
-# Aman Singh — Portfolio
+# Aman Singh — Data Engineering, Backend & Automation Portfolio
 
-**Python Backend Developer · ETL Pipeline Engineer · AI Integration Specialist**
+**Data Engineer at ParallelDots · Backend Systems · Data Automation · Practical AI**
 
-🌐 **Live:** [aman-singh143.github.io/Aman-Portfolio](https://aman-singh143.github.io/Aman-Portfolio/)
+🌐 **Live portfolio:** [aman-singh143.github.io/Aman-Portfolio](https://aman-singh143.github.io/Aman-Portfolio/)
 
----
+## Positioning
 
-## About
+I help data-driven teams turn fragmented inputs, manual reporting, and operational bottlenecks into reliable data flows, backend services, and decision-ready outputs.
 
-A clean, fast, fully static portfolio built with **HTML, CSS, and vanilla JavaScript** — no frameworks, no build step. Designed to impress recruiters with a distinctive teal color scheme, smooth animations, dark mode, and optimized performance.
+My work sits at the intersection of:
 
----
+- Data engineering — ETL/ELT, validation, transformations, data quality, and reporting pipelines
+- Backend engineering — Python services, APIs, databases, integrations, and internal tools
+- Automation — replacing repetitive spreadsheet and reporting tasks with dependable workflows
+- Practical AI — using AI only where it improves a workflow, rather than adding it for its own sake
 
-## Features
+## Current Role
 
-- 🎨 **Teal color palette** — unique identity, not generic blue
-- 🌙 **Dark / Light mode** — system preference detection + manual toggle
-- ✨ **Animations** — aurora gradient, page transitions, staggered card reveals, typing effect
-- 📱 **Fully responsive** — works on desktop, tablet, and mobile
-- ⚡ **Fast** — 53KB optimized image, lazy loading, no heavy JS
-- 🔍 **SEO ready** — JSON-LD schema, Open Graph, canonical links, meta tags
-- ♿ **Accessible** — skip links, ARIA labels, keyboard navigation, focus styles
+**Data Engineer · ParallelDots (Remote)**
 
----
+I work on data flows that connect image-processing and analytics outputs to client-facing reporting and business use cases. The role involves ETL bridging, data organization, analytics delivery, and improving the reliability of operational data workflows.
 
-## Pages
+## Problems I Solve
 
-| Page | What's There |
-|---|---|
-| **Home** | Hero, about, experience, skills, AI backend, projects, education |
-| **About** | Tech stack, engineering strengths, what I do, currently learning |
-| **Experience** | Full work history with impact metrics and KPIs |
-| **Projects** | Production highlights + side projects with tech badges |
+- Manual Excel/CSV reporting that consumes recurring team time
+- Disconnected systems and data sources that need a reliable integration layer
+- Unvalidated data flowing into dashboards or business processes
+- Slow reporting queries and fragile backend workflows
+- Internal teams needing a small, focused tool rather than a full IT build-out
+- AI use cases where document processing, structured extraction, or search genuinely adds value
 
----
+## Services
 
-## Tech
+### Reporting & Data Automation
+Automated ingestion, cleaning, validation, scheduled reports, alerts, and business-ready outputs.
 
-`HTML5` · `CSS3` · `JavaScript` · `Inter Font` · `GitHub Pages`
+### Data Pipelines & Integrations
+ETL workflows and API/database integrations that move data reliably between the tools a team already uses.
 
-No React. No Tailwind. No npm install. Just open `index.html`.
+### Backend & Internal Tools
+Focused Python APIs, data services, and internal dashboards for teams that need a practical workflow improvement.
 
----
+### AI-Assisted Workflows
+Thoughtful AI integration for document processing, extraction, classification, and knowledge search—only where it is a good fit.
+
+## Selected Work
+
+- **Analytics Delivery Pipeline:** Connecting operational outputs with client-ready analytics through dependable ETL and data organization.
+- **ETL & Reconciliation Suite:** Validation-first data workflows that reduced manual preparation effort by ~60%.
+- **Internal Reporting Backend:** Python services and tuned SQL workflows that improved reporting/dashboard performance by ~50%.
+- **Payment Fraud Detection System:** 6.3M+ transaction records, XGBoost classification, and ROC-AUC of ~0.96.
+
+## Core Stack
+
+`Python` · `SQL` · `Pandas` · `FastAPI` · `Flask` · `MySQL` · `PostgreSQL` · `Docker` · `Git` · `Linux` · `pytest` · `OpenAI API`
 
 ## Run Locally
 
@@ -51,38 +63,9 @@ cd Aman-Portfolio
 start index.html
 ```
 
----
-
-## Deploy
-
-1. Fork this repo
-2. Go to **Settings → Pages**
-3. Source: **Deploy from branch** → `main` / `/ (root)`
-4. Live at `https://<username>.github.io/Aman-Portfolio/`
-
----
-
-## Files
-
-```
-├── index.html        # Home page
-├── about.html        # About page
-├── experience.html   # Experience page
-├── projects.html     # Projects page
-├── style.css         # All styles + design tokens
-├── script.js         # Theme, scroll-reveal, typing effect
-├── favicon.svg       # Teal SVG favicon
-├── profile.jpeg      # Profile photo (53KB)
-└── resume.pdf        # Downloadable resume
-```
-
----
-
 ## Contact
 
-📧 [amansingh143003@gmail.com](mailto:amansingh143003@gmail.com) · 📱 +91 91063 11773  
-🔗 [LinkedIn](https://linkedin.com/in/aman-singh-865780203) · 💻 [GitHub](https://github.com/Aman-singh143) · 🧩 [LeetCode](https://leetcode.com/u/amansingh9)
+📧 [amansingh143003@gmail.com](mailto:amansingh143003@gmail.com)  
+🔗 [LinkedIn](https://linkedin.com/in/aman-singh-865780203) · [GitHub](https://github.com/Aman-singh143)
 
----
-
-*Built with ❤️ by Aman Singh · © 2026*
+*Built by Aman Singh · © 2026*
