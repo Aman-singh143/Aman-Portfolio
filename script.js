@@ -13,54 +13,40 @@ function applyTheme(theme, htmlElement, themeBtn) {
   }
 }
 
-// Expose for testing if in Node/Bun environment
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { applyTheme };
 }
 
 (function () {
   'use strict';
-
-  // Only run in browser environment
   if (typeof document === 'undefined') return;
 
-  // Mobile Nav Toggle
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
-
   if (toggle && links) {
     toggle.addEventListener('click', function () {
       const isOpen = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
   }
 
-  // Theme Toggle
   const themeBtn = document.getElementById('theme-toggle');
   const html = document.documentElement;
-  const STORAGE_KEY = 'aman-portfolio-theme';
-
-  // Load saved theme or detect system preference
-  const savedTheme = localStorage.getItem(STORAGE_KEY);
-  if (savedTheme) {
-    applyTheme(savedTheme, html, themeBtn);
-  } else {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(prefersDark ? 'dark' : 'light', html, themeBtn);
-  }
+  const storageKey = 'aman-portfolio-theme';
+  const savedTheme = localStorage.getItem(storageKey);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'), html, themeBtn);
 
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
-      const current = html.getAttribute('data-theme') || 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       applyTheme(next, html, themeBtn);
-      localStorage.setItem(STORAGE_KEY, next);
+      localStorage.setItem(storageKey, next);
     });
   }
 
-  // Scroll Reveal (IntersectionObserver)
   const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length > 0 && 'IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -68,115 +54,58 @@ if (typeof module !== 'undefined' && module.exports) {
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    reveals.forEach(function (el) {
-      observer.observe(el);
-    });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (element) { observer.observe(element); });
   } else {
-    // Fallback: show all immediately
-    reveals.forEach(function (el) {
-      el.classList.add('visible');
-    });
+    reveals.forEach(function (element) { element.classList.add('visible'); });
   }
 
-  // Active Mini-Nav Highlighting
   const miniNavLinks = document.querySelectorAll('.mini-nav a');
-  if (miniNavLinks.length > 0 && 'IntersectionObserver' in window) {
-    const sections = [];
-    miniNavLinks.forEach(function (link) {
+  if (miniNavLinks.length && 'IntersectionObserver' in window) {
+    const sections = Array.from(miniNavLinks).map(function (link) {
       const id = link.getAttribute('href');
-      if (id && id.startsWith('#')) {
-        const section = document.getElementById(id.substring(1));
-        if (section) sections.push({ el: section, link: link });
-      }
-    });
+      return id && id.startsWith('#') ? { element: document.querySelector(id), link: link } : null;
+    }).filter(function (item) { return item && item.element; });
 
     const navObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          const match = sections.find(function (s) { return s.el === entry.target; });
-          if (match) {
-            miniNavLinks.forEach(function (l) { l.classList.remove('active-nav'); });
-            match.link.classList.add('active-nav');
-          }
+        if (!entry.isIntersecting) return;
+        const match = sections.find(function (item) { return item.element === entry.target; });
+        if (match) {
+          miniNavLinks.forEach(function (link) { link.classList.remove('active-nav'); });
+          match.link.classList.add('active-nav');
         }
       });
-    }, {
-      threshold: 0.1, // Lower threshold
-      rootMargin: '-10% 0px -40% 0px' // Adjusted margin
-    });
+    }, { threshold: 0.1, rootMargin: '-10% 0px -40% 0px' });
 
-    sections.forEach(function (s) {
-      navObserver.observe(s.el);
-    });
-
-    // Handle bottom of page case explicitly
-    window.addEventListener('scroll', function () {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
-        miniNavLinks.forEach(function (l) { l.classList.remove('active-nav'); });
-        if (miniNavLinks.length > 0) {
-          miniNavLinks[miniNavLinks.length - 1].classList.add('active-nav');
-        }
-      }
-    });
+    sections.forEach(function (item) { navObserver.observe(item.element); });
   }
 
-  // ===== Typing Effect (index page only) =====
   const typingEl = document.getElementById('typing-text');
-  if (typingEl) {
-    const roles = [
-      'Python Backend Developer',
-      'ETL Pipeline Engineer',
-      'AI Integration Specialist',
-      'Data Systems Builder'
-    ];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typeSpeed = 80;
-    const deleteSpeed = 40;
-    const pauseEnd = 2000;
-    const pauseStart = 500;
+  if (!typingEl) return;
+  const roles = ['Data Engineer', 'Backend Systems Builder', 'Data Automation Specialist', 'Practical AI Integrator'];
+  let roleIndex = 0;
+  let characterIndex = 0;
+  let deleting = false;
 
-    function typeEffect() {
-      // Respect reduced motion: show first role static, no typing
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        typingEl.textContent = roles[0];
-        return;
-      }
-
-      const currentRole = roles[roleIndex];
-
-      if (!isDeleting) {
-        typingEl.textContent = currentRole.substring(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === currentRole.length) {
-          isDeleting = true;
-          setTimeout(typeEffect, pauseEnd);
-          return;
-        }
-        setTimeout(typeEffect, typeSpeed);
-      } else {
-        typingEl.textContent = currentRole.substring(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-          isDeleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-          setTimeout(typeEffect, pauseStart);
-          return;
-        }
-        setTimeout(typeEffect, deleteSpeed);
-      }
+  function typeEffect() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      typingEl.textContent = roles[0];
+      return;
     }
-
-    // Start after a small delay for page load
-    setTimeout(typeEffect, 600);
+    const role = roles[roleIndex];
+    typingEl.textContent = deleting ? role.slice(0, characterIndex - 1) : role.slice(0, characterIndex + 1);
+    characterIndex += deleting ? -1 : 1;
+    if (!deleting && characterIndex === role.length) {
+      deleting = true;
+      setTimeout(typeEffect, 1800);
+    } else if (deleting && characterIndex === 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeEffect, 450);
+    } else {
+      setTimeout(typeEffect, deleting ? 35 : 70);
+    }
   }
-
+  setTimeout(typeEffect, 500);
 })();
