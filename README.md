@@ -14,6 +14,7 @@ My work sits at the intersection of:
 - Backend engineering — Python services, APIs, databases, integrations, and internal tools
 - Automation — replacing repetitive spreadsheet and reporting tasks with dependable workflows
 - Practical AI — using AI only where it improves a workflow, rather than adding it for its own sake
+- AI workflow architecture — designing the data, retrieval/tool flow, structured outputs, guardrails, evaluation, and human-review points around an AI feature
 
 ## Current Role
 
